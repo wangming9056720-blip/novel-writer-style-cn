@@ -37,3 +37,14 @@ jobs:
           path: |
             baseline/smoke-clean.txt
             baseline/smoke-analysis.json
+
+      - name: Upload runnable original bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: original-cli-runtime
+          include-hidden-files: true
+          path: |
+            dist/
+            node_modules/
+            package.json
+            package-lock.json
