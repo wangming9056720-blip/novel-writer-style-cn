@@ -1,0 +1,39 @@
+name: original-baseline-smoke
+
+on:
+  push:
+    branches:
+      - baseline-original-run
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run original preprocess
+        run: node dist/cli.js preprocess baseline/smoke-sample.txt -o baseline/smoke-clean.txt --quality
+
+      - name: Run original NLP analysis
+        run: node dist/cli.js analyze baseline/smoke-clean.txt -o baseline/smoke-analysis.json --verbose
+
+      - name: Show analysis JSON
+        run: cat baseline/smoke-analysis.json
+
+      - name: Upload baseline outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: original-baseline-smoke-output
+          path: |
+            baseline/smoke-clean.txt
+            baseline/smoke-analysis.json
