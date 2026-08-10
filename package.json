@@ -25,6 +25,7 @@
     "build:commands": "node -e \"console.log('Skipping build:commands as script is missing')\"",
     "dev": "tsx src/cli.ts",
     "start": "node dist/cli.js",
+    "chunk": "node tools/chunk-novel.js",
     "clean": "node -e \"console.log('Skipping clean to preserve existing dist')\"",
     "prepare": "node -e \"console.log('Skipping prepare')\"",
     "prepublishOnly": "node -e \"console.log('Skipping prepublish checks')\""
