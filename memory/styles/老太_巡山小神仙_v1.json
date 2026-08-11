@@ -1,0 +1,189 @@
+{
+  "styleName": "老太_巡山小神仙_v1",
+  "sourceAuthor": "巡山小神仙",
+  "sourceWork": "老太片场跑龙套，养活古代一家人",
+  "analysisDate": "2026-08-11",
+  "profileVersion": 1,
+  "pipelineStage": "style-learn",
+  "sample": {
+    "cleanedCharacterCount": 644505,
+    "analysisBlocks": 13,
+    "batchCount": 4,
+    "chapterCoverageDetected": "1-241 (source numbering lacks 174)",
+    "qualityScore": 100,
+    "notes": "Competitor text remains private; profile contains only aggregate/high-level style features."
+  },
+  "confidence": {
+    "score": 0.84,
+    "heuristic": true,
+    "basis": {
+      "sampleSufficiency": 1.0,
+      "crossBatchConsistency": 0.85,
+      "uniquenessBenchmark": 0.5,
+      "dataIntegrity": 0.98
+    },
+    "note": "Uniqueness has not yet been benchmarked against other authors; 0.5 is a neutral placeholder, so this is not an authorship-identification score."
+  },
+  "vocabulary": {
+    "languageRegister": "通俗、口语化、具体、行动导向",
+    "formalityLevel": 0.40,
+    "formalityLevelType": "estimated",
+    "colloquialismLevel": 0.65,
+    "colloquialismLevelType": "estimated",
+    "functionalLexicalSignals": ["觉得", "心里", "点头", "赶紧", "立刻", "突然", "有点", "这样", "怎么", "看看", "声音", "眼睛", "脸上"],
+    "preferredLexicalBehavior": [
+      "优先具体名词和动作动词，少用华丽抽象修饰",
+      "复杂概念通过人物观察、试用、反应和结果逐步解释",
+      "对白用词随人物身份变化，但叙述底盘保持易懂",
+      "高频词只作为习惯信号，不要求机械复现"
+    ],
+    "avoid": [
+      "为了像原作而强塞题材专有名词",
+      "连续堆砌形容词、副词和抽象情绪词",
+      "把人物名、地名、行业术语当作文风特征"
+    ]
+  },
+  "syntax": {
+    "avgSentenceLength": 24.87,
+    "lengthDistribution": {
+      "short_le_10": 0.1587,
+      "medium_11_25": 0.4355,
+      "long_gt_25": 0.4058
+    },
+    "sentenceLengthStdDev": 15.21,
+    "complexityScore": 0.58,
+    "complexityScoreType": "estimated",
+    "punctuationStyle": {
+      "comma": 0.5422,
+      "period": 0.2809,
+      "colon": 0.0562,
+      "question": 0.0430,
+      "exclamation": 0.0320,
+      "ellipsis": 0.0239,
+      "enumeration": 0.0130,
+      "dash": 0.0076,
+      "semicolon": 0.0012
+    },
+    "paragraph": {
+      "avgLengthChars": 36.65,
+      "medianLengthChars": 31,
+      "p25Chars": 19,
+      "p75Chars": 49,
+      "p90Chars": 69,
+      "variationCV": 0.63
+    },
+    "rules": [
+      "不要把风格误写成纯短句；中长句是主体之一",
+      "句内可以连续展开动作、观察、解释或反应，但段落切换要快",
+      "短句和短段落主要承担反应、强调、笑点、转折",
+      "避免连续很多段只有同一种长度和节奏"
+    ],
+    "phaseVariation": {
+      "early_avgSentenceLength": 24.17,
+      "middle1_avgSentenceLength": 24.10,
+      "middle2_avgSentenceLength": 26.09,
+      "late_avgSentenceLength": 28.26
+    }
+  },
+  "narrative": {
+    "preferredPOV": "third_person_close_with_flexible_multi_focus",
+    "narrativeDistance": "close_to_medium",
+    "tensePreference": "contextual_modern_chinese",
+    "dialogueCharRatio": 0.28,
+    "dialogueRatioType": "measured_quote_character_ratio",
+    "dialoguePhaseVariation": {
+      "early": 0.225,
+      "middle1": 0.301,
+      "middle2": 0.337,
+      "late": 0.263
+    },
+    "psychologyMode": "direct_brief_to_medium_then_return_to_action",
+    "typicalMicroStructure": [
+      "外部事件",
+      "人物观察或即时反应",
+      "简短心理解释",
+      "行动或对白",
+      "他人反馈或局势变化"
+    ],
+    "dialogueBehavior": [
+      "对白与动作、神态、心理交替",
+      "重要信息可由对话承担，但避免长期纯台词墙",
+      "通过旁观者或对手反应放大关键事件效果",
+      "人物身份差异主要体现在对白语域，而非旁白突然变文风"
+    ]
+  },
+  "description": {
+    "detailLevel": 0.55,
+    "detailLevelType": "estimated",
+    "characterFocus": 0.85,
+    "environmentFocus": 0.35,
+    "focusOrder": [
+      "人物动作与神态",
+      "具体物件与过程",
+      "必要的环境定位",
+      "高情绪场景才强化意象与氛围"
+    ],
+    "sensoryMode": {
+      "visual": "high",
+      "auditory": "medium_to_high_in_dialogue_or_emotion",
+      "taste": "scene_dependent",
+      "tactile": "scene_dependent",
+      "olfactory": "low"
+    },
+    "metaphorMode": "low_to_medium_overall_high_at_emotional_peaks",
+    "rules": [
+      "环境描写服务场景功能，不做长时间空镜铺陈",
+      "食物、手艺、劳动、表演等过程型场景可增加具体细节",
+      "修辞克制；重点场面再提高比喻、声音、静默和身体反应密度"
+    ]
+  },
+  "rhythm": {
+    "pace": "medium_fast_with_stage_variation",
+    "transitionStyle": "explicit_time_location_or_task_transition",
+    "tensionCurve": "task_feedback_cycles_with_local_spikes",
+    "climaxIntensity": 0.75,
+    "climaxIntensityType": "estimated",
+    "phasePattern": {
+      "early": "短场景、强任务链、信息差喜剧、快速反馈",
+      "middle1": "单场戏延长，成长和关系对话增多",
+      "middle2": "对白与冲突增强，多视角侧写加重",
+      "late": "句子与因果链变长，解释和收束增加"
+    },
+    "chapterEndingTendency": ["新发现", "下一步行动", "信息揭示", "关系或利益变化", "高情绪画面"]
+  },
+  "generationGuidance": {
+    "core": [
+      "内容事实由当前章纲决定，风格配置只决定表达方式",
+      "使用通俗叙述底盘，先写清人物正在做什么、看到什么、怎么反应",
+      "心理描写紧贴行动，不把每个心理都扩写成完整论证",
+      "让对白、动作、神态、心理形成交替节奏",
+      "关键事件允许出现多拍反应链，但不要重复解释同一个结论",
+      "段落切分快于句子切分；不要机械追求一行一句",
+      "高情绪场景再提升意象和修辞密度，普通场景保持克制"
+    ],
+    "sceneAdaptation": {
+      "dialogue": "对白承担信息与关系变化，穿插动作/神态/简短心理",
+      "action": "动作清楚，反应快，短句适量增加",
+      "description": "抓具体物件和功能细节，环境不过量",
+      "psychology": "直给、短到中等长度，随后回到行动",
+      "mixed": "按事件→反应→心理→行动/对白→反馈的微结构组织"
+    }
+  },
+  "contentLeakageControls": {
+    "doNotCopy": [
+      "原作人物、地名、组织、世界设定",
+      "原作具体剧情事件",
+      "原作专有行业/题材词作为默认词库",
+      "原作高辨识度句子或连续措辞"
+    ],
+    "principle": "只迁移可泛化的句式、段落、叙述距离、对白组织、心理长度、反应链与节奏习惯。"
+  },
+  "metricProvenance": {
+    "measured": [
+      "cleanedCharacterCount", "analysisBlocks", "qualityScore", "avgSentenceLength", "lengthDistribution", "sentenceLengthStdDev", "punctuationStyle", "paragraph.avgLengthChars", "paragraph.medianLengthChars", "paragraph.p25Chars", "paragraph.p75Chars", "paragraph.p90Chars", "paragraph.variationCV", "dialogueCharRatio", "phaseVariation"
+    ],
+    "estimatedByStyleAnalyze": [
+      "formalityLevel", "colloquialismLevel", "complexityScore", "description.detailLevel", "description.characterFocus", "description.environmentFocus", "rhythm.climaxIntensity"
+    ]
+  }
+}
