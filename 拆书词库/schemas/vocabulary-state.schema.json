@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Vocabulary Pipeline State",
+  "type": "object",
+  "required": [
+    "project",
+    "book_id",
+    "book_title",
+    "rule_version",
+    "stage",
+    "total_blocks",
+    "processed_blocks",
+    "last_completed_batch",
+    "next_batch",
+    "coverage_status",
+    "blocked"
+  ],
+  "properties": {
+    "project": {"type": "string"},
+    "book_id": {"type": "string"},
+    "book_title": {"type": "string"},
+    "rule_version": {"type": "string"},
+    "stage": {
+      "enum": ["INIT", "CHAPTER_PARSED", "EXTRACTING", "BATCH_QA", "FULL_BOOK_QA", "STATS_COMPLETE", "FROZEN"]
+    },
+    "total_blocks": {"type": "integer", "minimum": 0},
+    "processed_blocks": {"type": "integer", "minimum": 0},
+    "current_unique_words": {"type": "integer", "minimum": 0},
+    "last_completed_batch": {"type": "string"},
+    "next_batch": {"type": "string"},
+    "coverage_status": {"enum": ["NOT_RUN", "LOW", "MEDIUM", "HIGH"]},
+    "blocked": {"type": "boolean"},
+    "blocking_reason": {"type": "string"},
+    "processed_batches": {
+      "type": "array",
+      "items": {"type": "string"},
+      "uniqueItems": true
+    },
+    "batch_rounds": {"type": "object"},
+    "warnings": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "counting_policy": {
+      "type": "string",
+      "default": "精确频次与章节覆盖由程序在完整正文上统一统计；批次只记录首次发现点。"
+    },
+    "updated_at": {"type": "string"}
+  },
+  "additionalProperties": true
+}
