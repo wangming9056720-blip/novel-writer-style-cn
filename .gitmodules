@@ -1,0 +1,8 @@
+[submodule "拆书词库/reference-forks/zhuRuan-webnovel-writer-opencode"]
+	path = 拆书词库/reference-forks/zhuRuan-webnovel-writer-opencode
+	url = https://github.com/zhuRuan/webnovel-writer-opencode.git
+	branch = master
+[submodule "拆书词库/reference-forks/Saemer2023-webnovel-writer-opencode"]
+	path = 拆书词库/reference-forks/Saemer2023-webnovel-writer-opencode
+	url = https://github.com/Saemer2023/webnovel-writer-opencode.git
+	branch = master
