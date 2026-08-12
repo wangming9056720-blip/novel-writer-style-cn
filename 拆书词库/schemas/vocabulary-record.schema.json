@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Webnovel Vocabulary Record",
+  "type": "object",
+  "required": [
+    "word",
+    "categories",
+    "book_id",
+    "first_seen_chapter",
+    "evidence",
+    "status",
+    "is_basic",
+    "is_genre",
+    "genre_tags",
+    "proper_noun_suspect"
+  ],
+  "properties": {
+    "word": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 12,
+      "description": "原文真实出现的独立词项。"
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "enum": ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U"]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "subcategories": {
+      "type": "array",
+      "items": {"type": "string"},
+      "default": []
+    },
+    "book_id": {"type": "string"},
+    "book_title": {"type": "string"},
+    "first_seen_batch": {"type": "string"},
+    "first_seen_chapter": {"type": "string"},
+    "evidence": {
+      "type": "string",
+      "minLength": 1,
+      "description": "能够证明该词确实存在于正文中的短证据。"
+    },
+    "status": {
+      "enum": ["NEW", "EXISTING_HIT", "REVIEW", "REVIEW_PROPER_NOUN", "ACCEPTED", "REJECTED"]
+    },
+    "is_basic": {"type": "boolean"},
+    "is_genre": {"type": "boolean"},
+    "genre_tags": {
+      "type": "array",
+      "items": {"type": "string"},
+      "default": []
+    },
+    "proper_noun_suspect": {"type": "boolean"},
+    "author_feature_suspect": {"type": "boolean", "default": false},
+    "notes": {"type": "string", "default": ""},
+    "stats": {
+      "type": "object",
+      "description": "仅由程序统计层回填，LLM 不得臆造。",
+      "properties": {
+        "book_frequency": {"type": "integer", "minimum": 0},
+        "chapter_coverage": {"type": "integer", "minimum": 0},
+        "book_coverage": {"type": "integer", "minimum": 0},
+        "per_book_frequency": {"type": "object"}
+      },
+      "additionalProperties": true
+    },
+    "rating": {
+      "enum": ["S", "A", "B", "C", "UNRATED"],
+      "default": "UNRATED"
+    }
+  },
+  "additionalProperties": true
+}
